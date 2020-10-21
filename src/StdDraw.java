@@ -824,6 +824,10 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         }
     }
 
+    public static void setTitle(String title) {
+        frame.setTitle(title);
+    }
+
     // helper functions that scale from user coordinates to screen coordinates and back
     private static double  scaleX(double x) { return width  * (x - xmin) / (xmax - xmin); }
     private static double  scaleY(double y) { return height * (ymax - y) / (ymax - ymin); }

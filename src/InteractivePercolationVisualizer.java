@@ -28,6 +28,8 @@ public class InteractivePercolationVisualizer {
 		// number of sites opened
 		int opened = 0;
 
+		// set title
+		StdDraw.setTitle("Interactive Percolation Visualizer");
 		// turn on animation mode
 		StdDraw.enableDoubleBuffering();
 

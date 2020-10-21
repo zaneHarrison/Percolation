@@ -283,9 +283,10 @@ public class MazeDemo {
         int n = 30;
         MazeDemo maze = new MazeDemo(n);
         StdDraw.enableDoubleBuffering();
-        // maze.generate();
-        maze.generateUF();
+        maze.generate();
+        //maze.generateUF();
         maze.draw();
-        maze.solve(false); // true for dfs, false for bfs
+       
+        maze.solve(true); // true for dfs, false for bfs
     }
 }
