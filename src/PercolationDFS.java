@@ -19,6 +19,7 @@ import java.util.Arrays;
 public class PercolationDFS implements IPercolate {
 	protected int[][] myGrid;
 	protected int myOpenCount;
+
 	/**
 	 * Initialize a grid so that all cells are blocked.
 	 * 

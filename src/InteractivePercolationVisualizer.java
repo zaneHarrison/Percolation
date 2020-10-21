@@ -29,7 +29,7 @@ public class InteractivePercolationVisualizer {
 		int opened = 0;
 
 		// turn on animation mode
-		StdDraw.show(0);
+		StdDraw.enableDoubleBuffering();
 
 		// set background, leave margin for writing
 		StdDraw.setXscale(-0.5, N+0.5);
@@ -44,7 +44,7 @@ public class InteractivePercolationVisualizer {
 		while (true) {
 
 			// detected mouse click
-			if (StdDraw.mousePressed()) {
+			if (StdDraw.isMousePressed()) {
 
 				// screen coordinates
 				double x = StdDraw.mouseX();
@@ -96,7 +96,8 @@ public class InteractivePercolationVisualizer {
 					StdDraw.text(.25*N, N*1.025, "last opened = ["+vi+","+vj+"]");
 				}
 			}
-			StdDraw.show(20);
+			StdDraw.show();
+			StdDraw.pause(20);
 		}
 	}
 }
