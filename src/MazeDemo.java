@@ -282,11 +282,15 @@ public class MazeDemo {
     public static void main(String[] args) {
         int n = 30;
         MazeDemo maze = new MazeDemo(n);
+        boolean isDFS = true; // true for dfs, false for bfs
+        String title = "Maze Demo with ";
+        title += isDFS ? "DFS" : "BFS";
         StdDraw.enableDoubleBuffering();
+        StdDraw.setTitle(title);
         maze.generate();
         //maze.generateUF();
         maze.draw();
-       
-        maze.solve(true); // true for dfs, false for bfs
+
+        maze.solve(isDFS);
     }
 }
