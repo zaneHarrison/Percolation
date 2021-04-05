@@ -64,24 +64,24 @@ public class PercolationUF implements IPercolate {
             return;
         } else {
             myGrid[row][col] = true;
-            if (inBounds(row - 1, col) && isOpen(row - 1, col)) {
-                myFinder.union(cellID(row, col), cellID(row - 1, col));
-            }
-            if (inBounds(row + 1, col) && isOpen(row + 1, col)) {
-                myFinder.union(cellID(row, col), cellID(row + 1, col));
-            }
-            if (inBounds(row, col - 1) && isOpen(row, col - 1)) {
-                myFinder.union(cellID(row, col), cellID(row, col - 1));
-            }
-            if (inBounds(row, col + 1) && isOpen(row, col + 1)) {
-                myFinder.union(cellID(row, col), cellID(row, col + 1));
-            }
-            if (row == 0) {
-                myFinder.union(cellID(row, col), VTOP);
-            }
-            if (row == myGrid.length - 1) {
-                myFinder.union(cellID(row, col), VBOTTOM);
-            }
+        }
+        if (inBounds(row - 1, col) && isOpen(row - 1, col)) {
+            myFinder.union(cellID(row, col), cellID(row - 1, col));
+        }
+        if (inBounds(row + 1, col) && isOpen(row + 1, col)) {
+            myFinder.union(cellID(row, col), cellID(row + 1, col));
+        }
+        if (inBounds(row, col - 1) && isOpen(row, col - 1)) {
+            myFinder.union(cellID(row, col), cellID(row, col - 1));
+        }
+        if (inBounds(row, col + 1) && isOpen(row, col + 1)) {
+            myFinder.union(cellID(row, col), cellID(row, col + 1));
+        }
+        if (row == 0) {
+            myFinder.union(cellID(row, col), VTOP);
+        }
+        if (row == myGrid.length - 1) {
+            myFinder.union(cellID(row, col), VBOTTOM);
         }
     }
 }
