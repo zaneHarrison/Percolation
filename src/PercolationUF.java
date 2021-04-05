@@ -68,19 +68,15 @@ public class PercolationUF implements IPercolate {
         }
         if (inBounds(row - 1, col) && isOpen(row - 1, col)) {
             myFinder.union(cellID(row, col), cellID(row - 1, col));
-            myOpenCount++;
         }
         if (inBounds(row + 1, col) && isOpen(row + 1, col)) {
             myFinder.union(cellID(row, col), cellID(row + 1, col));
-            myOpenCount++;
         }
         if (inBounds(row, col - 1) && isOpen(row, col - 1)) {
             myFinder.union(cellID(row, col), cellID(row, col - 1));
-            myOpenCount++;
         }
         if (inBounds(row, col + 1) && isOpen(row, col + 1)) {
             myFinder.union(cellID(row, col), cellID(row, col + 1));
-            myOpenCount++;
         }
         if (row == 0) {
             myFinder.union(cellID(row, col), VTOP);
